@@ -4,21 +4,17 @@ export class Shape {
   height = 200;
   xPos = 0;
   yPos = 0;
-  zIndex = 0;
   backgroundColor = '#000000';
 
   constructor(
     width: number, 
     height: number, 
-    xPos: number, 
-    yPos: number, 
-    zIndex: number,
+    positionOffset: number, 
   ) {
     this.width = width;
     this.height = height;
-    this.xPos = xPos;
-    this.yPos = yPos;
-    this.zIndex = zIndex;
+    this.xPos = positionOffset;
+    this.yPos = positionOffset;
     this.backgroundColor = this.getRandomColor();
   }
 
