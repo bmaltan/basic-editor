@@ -22,9 +22,9 @@ export class Shape {
     this.backgroundColor = this.getRandomColor();
   }
 
-  moveShape(xPos: number, yPos: number) {
-    this.xPos = xPos >= 0 ? xPos : 0;
-    this.yPos = yPos >= 0 ? yPos : 0;
+  move(pos: {x: number, y: number}) {
+    this.xPos = pos.x;
+    this.yPos = pos.y;
   }
 
   getRandomColor() {

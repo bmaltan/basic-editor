@@ -4,3 +4,26 @@
   width: 80vw;
   background: #cecece;
 }
+
+.editor-item {
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 25px;
+  border: 4px solid rgba(0, 0, 0, 0.25)
+}
+
+.editor-item:hover {
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  cursor: move;
+}
+
+.delete-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.delete-button:hover {
+  transform: scale(1.2)
+}

@@ -1,18 +1,16 @@
-import { useState } from 'react';
 import { Shape } from './types/shape.class';
 
 interface EditorItemProps {
   item: Shape;
+  removeItem: (id: number) => void;
 }
 
 const EditorItem = (props: EditorItemProps) => {
 
   return (
     <div 
+      className="editor-item"
       style={{
-        position: 'absolute',
-        borderRadius: '25px',
-        border: '4px solid rgba(0, 0, 0, 0.25)',
         top: `${props.item.yPos}px`,
         left: `${props.item.xPos}px`,
         width: `${props.item.width}px`,
@@ -20,10 +18,15 @@ const EditorItem = (props: EditorItemProps) => {
         backgroundColor: `${props.item.backgroundColor}`,
         zIndex: `${props.item.zIndex}`,
       }}
-    />
+    >
+      <span 
+        className="delete-button"
+        onClick={() => props.removeItem(props.item.id)}
+      >
+        ❌
+      </span>
+    </div>
   );
 }
 
 export default EditorItem;
-
-
